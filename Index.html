@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram Feed</title>
+ <!-- Required meta tags -->
+   	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="Style.css"/>
+</head>
+
+<body>
+    
+<!--First NavBar-->
+<div class="row">    
+  <div class="col-sm-12">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           
+            <!-- Image and text -->
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="data:image/png;base64,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" width="20" height="20" lass="d-inline-block align-top" alt="">
+            Instagram
+        </a>
+      </nav>
+ 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+       
+  <!-- Modal -->
+        <form class="form-inline my-2 my-lg-0">
+          <button type="button" class="btn btn-primary my-0 my-sm-0 btn-sm" data-toggle="modal" data-target="#exampleModal">
+            Create New Post
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--<div class="modal-header">-->
+        <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+        <!--    <span aria-hidden="true">&times;</span>-->
+        <!--  </button>-->
+        <!--</div>-->
+      <div class="modal-body">
+            
+      <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+  
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALbSURBVHhe7ZpZihRBEIYbRX0Qn90voIfQZ7druOtpxO0WrjdQH9wFl1uo+KCo6P+BA0GQ3VGRPYOd0/HBB8Nk/tGV3VVZlVU1K4qiKIqiKIqicOyW1+Qz+U3+GUy2+am8LBlLikPylWwVHtGXkjFNYo98LVuFRvaFnLQnXJGtAtvBSzKEY96G7snDcjTY5vvSjoU5IcRPeEfkqLDtdixfZYgN4Oikx5MOrDjp8UQB3+5dBnZZJuHH8oPkcET+fiSZxLKHZHr7ooBv9/ZwUN6VP2WrppU+tyWZKfh8SBTw7d4sZ+UX2aq1SDKnZYTPhUQB3+7NcFX+lq06U/wludRdhM+EpAOdnJMMwH/eG8ka5Jjc+8/j8rqkzfenxhk5D98/JB3ogOvyz9J+znd5Qe6Q86DtoqSvzVLrgGxh+2FIOtABE579jB/yhJwKfcnYGrdkC9sHQ9KBJEeln+3PyyzsLbYGNVuX7LYPhqQDSfxii5Xnot1+HmTeSVuLw8Nj2zEkHUjyUNr6THi9MDHaWg+kx7ZjSDqQ5JO09Znte+HsYGt9lB7bjiHpQBJWZLb+PtkLWVurtdqz7RiSDiRZ+y/AHwLsxr0MeQhs5STIHSCPbceQdCAJ1+62/lvZcxrcKYc8DbKe34wLIQZra1CztUS2fTAkHejgjrSfkb0UPin9pfBN2cL2wZB0oAN+qdZiiF81WgxxCLUWQ/tlC9sPQ9KBTljCtpbDzAlMbszwfjnsj3mkxik5D98/JB1YAtYFrS9hqmRbE5/FZ0LSgSXhtlbPLTF2+0W//AY+F5IObALMCazn/dmhJX1uyP92U3QrYT3PLs2q7r3k0hb5m//Rln1Mlx5POrDipMeTDqw46fGs/cNRHiHbEAuMtXo8vvYvSPAaCe/UtAqM7HO5S06CBxe8U9MqNKIMfvJLUhuwJ7DweCL9bawRZJvZdq4d0q/JFUVRFEVRFEWxnZnN/gLHLrl2REMDFgAAAABJRU5ErkJggg==" width="20">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ7SURBVHhe7ZtJq1xFGECfxjgtkmhUcFoZh4iJGxNdCA4L90oCko2zIriIbiRBQoiICcSF0y8QxRE0CxciLsRVTLKQ4JyFOIHzEOcYPUde4OPjJr5Kd1Xfft0HDjS3b9X3VXe/mm69mSlTpkxpwLF4BW7El3Avfod/zuprr72IG/BytMzYczY+jJ/iP4V+gpa1jrHjVHwCf8euxpVoHY/jKTgWrMGvsasxg/gVWndvOQ6fxK7k9Qd8Gm/DVXg6LpzV1167HZ9B7+2qQx/DBdgrTsJXsCvh9/AW9J654r234vvYVaexSuqrit9GV+N/xfXoL+Nosey9+Bvm+o3Zi1+CP8mc3Gd4GQ4L/zw+xxznURwpazEntQvPwmFjnbsxx7sBR8JStGeOyTje1xy37Sw/whjTHJZgcxznYyK/oD/V2lyCxoqxnSc0xW/5D4xJ2OG14gGMse0kz8RmOEWNCTjUDdLbl3IyfoExh4ewCS5S8tz+JmzNXRhzcO3QZAHlqi4G/hFHMSnxV/ATxlxa9EH/LWlj0KdwVDyLMZf7sTqu52NQ5/alnIuu/f0G1TrPx1LuxJjLC1gdNy5i0NVYwjn4LcY61Gu+V0L+c3wHq+PuTQzqhKgEv6VYPvo8lnAaxvLfYHXy+H88lvAzxvJRO9QSTsBY3tyqsx9j0EVYQu65o6UfgLFjeXOrzocYg67AEnInGrVjLGElxvLmVp3XMQZ1QlLCBZj7EfXaMizhbox1vIbVyfPw0m9NXEvY4fmTd/vLOkobL5aLuZhbda7EGNSVWWk/MAyM6a5TzMXcquM2lDs+MfDN2BonYDEHc2q2RbYNY/C3sTV7MOawFZuxHA9iTOBqbIWxYuy/8SJsyg6MSbyKrTBWjP0yNucqjEnoNVibazHHNZeR8AbGROwLjsFaWLcxYkxzGBluQOS+4EashXXHWMZusglyJJ7DmNTHWLpAmgvWuQ9jLGOPnPPQQw4xMR9nDZv7MMYwprF7QX485oqvdHPjSLiDlJfRxuwNZ+D3GBMc5tCUh1xjGbNX3IExSb0eB8U6cr2lK9AmOES9iTFR5+eDLJQsm9cdb2HNoXYgnCLnc0GeGjla8okTt7wuxl6zCWPSjtXXYSmWyXOMB7H3uFH5LsbEv0Qfbc8V77VMrOMDPBHHAmdnf2FsgEda5ko+cnMAPTw5VmzG2Aj1Sc7/kZ/26BYcO3xcvhNjQ9y2dlP0cPhe3nZ38eNRurHkQsz7dn4oXQ3yWv7ALNt8o2PY3IOxUfoIZryW77Ps2OOkxWlxbJjDmyfMDuHrPORZprcTnlI8PO0JjthAFzdOajQvdLzXMvMK9+zz0OhR2Hwc1nua7O+PAv8ZIja2S++Zt/g3nZe2Ud+bN3/3h2Mxum2WG+8135sILsV42tPXXpso1uGhD8DXE8n2WScWn+b24p8epkyZMonMzPwL5Dg61/eQY9sAAAAASUVORK5CYII=" width="15">
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </form>
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA6sSURBVHhe7VppVFXnuT7tvU3adKVZ/XGTm5jhqijKjMogBBHiLJMKKoNymKwaMCrikEhom0RjNINdMdGoDM7MHGSQQRAPpPdaYm2q0a7mrtxG2v5Iclc0CEHgee/7bj7OYThwDOXkdrl41nrX/vbzPu/wnXP2/r69QTeGMYxhDN8nnlwHjyefR82TyfhiXDL+V0zGivNUsvsTz6wnt2fW4w4fybJpPjclv/8wYR1OTFhHNH4dZY9PwGNPr6Ofi8lYuB4fTir5/YdJv8Dnk9YSTfgFJinKBLskTBSf3Vq0KOr+gl0KfjZlDdGUJLTpIuhfFG1GBv3Qfg1aRTNhDT2i2H9++GfQv6rhsJiaBC/HJCKHRFxR1CA4JFGzaJzWYKaihsW91h51RPA36JyINJdE/J0NbFeckxCi3BbB+t0uiUSszVTUILDmqKZJoNcVZRGcI8g5Ab+X2hzzV5cEpMovSLltDC7kFo9M93giMbc43O0du8fjsEsMfqqUGlwTaDZrCpQfrvEIUK5BYP8s0Wh541E0UDt9DT3E/KHeejzuMo3jcPR7+BDoBx5cyCOOiI+tnvGYJ7+G6Xokz4hDm8brcYPHcTPikTZDj096tETMtbNtVImGBOfdIFpTnB7Xpsdhk0c86Xvzabn0eEEuAR4vlF40vR6Z0o9KNfrw1GOLl57IS8+T18NP0Ro8VsPRMxYf9/jNxroWtgyPWPp3JbUKL14WvWKRLrED83Htq16r4aKkGqQX6UmrF4s0RY8+fFbjb76riWauwnxF9YNDBD3guxrJrCv2WU3ZPqsQ6u/fc6Na24RHNzQhLqWJsjc0UXNKE75g61D2xYYP8TvxJf+W9KKVGIl9NobCON8x31UwcL4U73D8RHwDIT1Jb6z7q6JGF9LMrBh0+61CZ++k7gUbG+G3qRFnNzWhc3MT0T1ZI+5ubkLpZiM9q9JYhfQkvUmP36W/74SAGPw+IIYoMNr6tbylERPTjChLayTqMXRtMeIic6lbjfBO5W95TTP9SEzGwrF/C8cZRdsbx+dnUxswXqUdEoExSJbepEdFjT6ei0LQnCiiOZFoD1zZ/zrsix1GRG1vxDc7eAI8bttuxB6ZpHJbhWh3NGKvxEoOjr+1owkrlXsQAlbCcU4U2rTeoodfjv9hzFuJg/Mjifh4zT+WfqxoE3YakZ5uJBLbaaS8DCM9rVzfGRKbbkSxlu8isPMiXlIuExYswIPzIvEH6Wl+JD5QtO0QFEQPLVyO64tWEC1e3v9SyLiIF395keiXDeiWMRH9QLk0jEvBk/zIm8yPwJX8+HudrVWZjCvYt140Sq5BcnC+9IwGQHJnNNB25dKwcAWSpRfpae6APYjNEByB2ODlRMHLUaQo3WsXEPVqA9ErFwAeL1e0hqeexxMT1uLI+LXolCe+4axHg8NPJ+FxFa7hlXpESm4t/0Xz5SA9aL1EkF5RtsfScKQuiSAKi8AJOd9tpAm76nF79wWi3RfwoiZScOAt8tREfMP7fOLngQ4+z+XngUj7eNjLrlFMxsKJr0ejPTPccuQtr0qjgWukazXqcesVdWMMC8cxrZdwG67/A7FsKa6FLyNatgxL5XzPBZS9wY29cQH5fX/2vFV9gbe23e4JvFVN4O1wAuyUa0iIhuMKJUaLjUeKcmmXwxv1KFS1zgrHPYRqvXBPslPVhLbEimU0e8VSohVL0CLr7VsX4PdWPdFbdWjb14CnlEzHu7UQ79Xo5h1dl/cIdmccs1VitXg9ghWt23sez3CtdlXTV3pYvhQ3tZ64NyWzHSKXoDBqCVFkGF6W83fqULq/juid8+YnuMDVGOcfjdv+vC7zccQ/Td7UbJUcs2Loa79o8z2Ba+6VmvvrYJBz6UV6ilqCAk0w2uAHjEdiQuGzKgR7VoUS8bEtegkef6cWjx2oRee759ElYyWXpfLIPF6W5q5EoaJGDM5RouXqs8Rpdc+j+91a3H2vCo9KL9zft6tCAbZdMSHwil6Anyn5yBC3GK6xITilD0GLPoTIbEBcMNaJ5uB5xB2sJTpYg4taECN0BZ4KWo4uto6wFZio6H44UEthPIF6tlZl9e+dt7yBCQ6HXVAE7vLdvnNxOMYpWnewFo2qdqyc64OwRXob0Otf9ME4IXPRgu4VCYvhmRCEtsRgIjE1bubjkfgQzFIy3ZFqyj5SQ3S4GqmK0oUvRXIE35T4mKuofjhUQ68f4sb7mjYRsRq8qmT9EL4M+VrOcKxXFNfGFq12DbIUpePeArjHrMQgXE4MRrup/2DcYd8MJbOOpMWoXrOYKGkRMpMWYGLGEC8asmuomY1yasyvsKLDUB4dRsTHSEWZkFmD0KOsH84OV5lveL3g+0605IwKRZmidFlV8JXa2dW4pKh+kPcCiQsxmeeQo+ZSpVzWsX4Rvlq/iChlAf5NURZxvApfHq/mxivMuvhg/ClBPnkurigTcqpQn8P6gZbdx7KqUafkJkguycnf7g1F6Y7xtS+1pQdFWcTauXhU5rJu4fC6fkheSF+z0Zo5w7+dPVWFjtNVRHl59ICidOsX4rYU5J/cw4oy4eQ5tJ5k/XB2ohq3ldwEySU5JbeidBUVeFBqSw+KsgiZg8xF5qQo63hhPn29cT7RNisfQO45dOSd6/8BbJyH25s4Ns3CB5BbidZc1udy40PZmarBH4DkkpySW1HaByC1pQdFWYTMQeYic1KUdWyehy9T5xFtCDQvbZZQWIEviyq5iT6XwLY5+NP2OfwI+9zgS6CwEnWF3PSwxholNyEtAPZazjnmS8DAS6HUlh4UZRFyGctcUufiK0VZR9pcnNs6l2jrXOTIRIZ60WiooGYDN1Faab4Jvjwb5RkB/NQWgChFmVBageBS1kvMUFZSicVKbkKGP2JUTtNN0FAOX6W3eBOUG/f2ebCTOchcZE7KZR0vzsGM7YG4s+M5Is0C8S3bZf4wsrYFIFDJdOXllF1eQVRebl4GX/PD87tmEe3ys7wMsvZVLcaSleNXStYPu2YhX3K+5t+z/xCUVSJNxZiWwW3P0Wzu+yj33Mz9tvb2L3PZHkDTlezewAlcdgbi2EsB+MvOQKK+xtwW0VSWkf5cOdG5Mhi1IMY+Pzz1pg863/RFxxs+ljdC58oRVFWOOrbbYhxfW12BRcrdD296w26fL+5Kzj0+eELRuspyNEntqrM9GyHpiftFv14D0ML8cZmLFjRSpPng4fTZ8Ho5AK/xzxB8bH/RD49X8VJUcxadtWXoqjWY7xcHPHH4gBfRAS/z+4KRgPjp7l1PlEqud73wvqJ1UotrdnPtu9KD9MJ9tcllwpfgbunV2g18xPj1LBT82p+IjxlyXl8KQ/1Zorqz2KsJGEfc8cRhD/qajQ57YquivzM+8MA2LQfnyvIw/12Ba+5TNYvl/Ff+2Kl6ss3DUF/s9qfZ6hpvyeBHUWMpPctGRgPa+Wh6/3fcHSHH3NClmTu2KfqeIN+8xHCObok/7mq+MTaV4Rmu9a3UvGiAr/TA952b0pP0pmS2gzT3ui+u7XmWiC1MuA9LcfZDbuhDAwr6vhDJdcGGPBd057nwUukCQ66D9RcioslzRqkW44yuXCckK5f2QoRrFGu1SlEiHPeyVHqRnjTR94G9Pkjb50vExxw5/08Dxl8y4PYlA9F/GZCuiRQMjggqccQtgyMvc47o4GNeiQOiS51oSpULflpij4eLHDFVOPbnKw1JTIlT/yXxUgkypAYfb/22mP5DuH0+OCm98HGzJvo+8PZMxL/tQ/TWTPM191EJVjYXA2KXi/o/CFVOweOV9jjE1nluCq8aw1iPBu9LjArX8FERYnrzNxsoQtG6t31QpPXi27Ma2Bx7+Vv7jTdu/GYm0f6ZeF7RGq4U0fY/FBNdKQKuFCO97+UgqJ2EcfV2WMdWVmeHT9huK/tEOPGJRsk1SA7OlyE5e3L3fy2+3xspWi/euH5oOj2kaNvBtMR54uP9C/Cgok34YxFe+mMhcLWIiI/FV/NG/ocRieV8BpULklu5TMjypx/zcntVWyo9cUjRtsH7ngg95El0yANt782Ak6IH4UYRll8vxK0b3Pj1IrTx+b6P++wTrEG0EsPWoeXoyWX62Q/EQW84H/RAu/R2cMbg9wmjhg9m4Iqsy7w+m15VD4UbuRj/aSFKPy0kEvtzIbrZGtm2/DkfPv/Nk+Rv+AExGX9aAF+2rUrT3RvHnOEzdcMbDoc9sEH1dllRowu+vn6UOR3ImoZOWXsVbRX/w5P9rAAlbHc/40Xy3ky0KJFYlcYqpKfMaegSy7PVf4lku+NvOdOIcqZZ/geJXG/8JMcdKawrZs2pLHcsq1cf1t8L8WhLPmJv5iPrZh5+93k+vuBxh5g2zsMl8YlGtBIjE8lxQyjnysmehhLJnedgfvfQF9luWCi9se6mokYfJ12RdtKN6KQbWk+4m1+OCk44w/mEG672+PsaWtjS8/psZa1BtBzzMttNC/k+PubS//5z3Bl+zLdqfhcb7gfkGzntgswzrkR8vHPGDYvkGz7jio1s7cKfccEn7Ft1yhWbeHxV4zRD+2lnvKBSDQmO3XzaFd/2xvH5Nc6TetqV9JzjuimXK5Kl9ik3zOXxN5rWFUdlp6pS2QYZOvohb1WP5vNWtcfQ3Ttm/v3SAWtxvivNZr5Q87sABc79fzl9UeCKgF4dxxRIrHJpkNzs+6C3Xj5vlU1j/mKkNyW1LaRQkRM28xa2ha2L7aPCAdvWgShypNeLnIgKHXFUUYPAeTI1jZPlvw/0otgRwVz/Mlu39FDghFSb3fis4V4Llzphptrjf6SoQeDngMuaZiq8FDUs/t8mPRLUTKBHyhyIyqbijqWfqnBlDmgTTYXdP/h3vX9WVE5FS+VUfuix8FhcPgWTxVcxBZ8r6v5D9WScrLEnqpmMrFonPFbmTD8Xk3GNPY5pPnscV/L7D+cnwbVuMu7UTSaybLhTP2XoZ4z7AsaJNP3CRFSx3WqwIxLj8VcNdqhomIhpSjaGMYxhDGMYg82h0/0fsFxpuMBJ+GMAAAAASUVORK5CYII=" width="20px" height="20px" alt="">
+          </a>
+          
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">A</a>
+            <a class="dropdown-item" href="#">B</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">C</a>
+          </div>
+        </li>
+      </div>
+    </nav>
+  </div> 
+</div>
+        
+<!--Second NavBar    -->
+<div class="row">
+    <div class="container mx-auto" style="width: 130px">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQpSURBVHhe7ZpLyE1RGIZ/hDIgCeVSkksGZEQmlJQRZaYwM3E3Y2KmDMwMGCglMnAZIBkRE5dco0yYYEBuuSYlvG/+Vau3tc+3vu3s/5ztX089xT773Wetfb6119r73wOFQqFQKBQKCcbAnfAW/Ap/t0y2+SbcBtkXF9PgA5g6cBu9D9mnLMbChzB1oDZ7D2ZVwnaYOsD/4FZowjEfhy7A6bBtsM0XYdwXXhNM9II3A7YVtj3uy2doEgdo23H3xx3oc9z9cQeGgJnwLGQJ03NwLszB3R93oGE4jt9DbRe35VyfNGfiDjTMGahtCp6GFpoxcQca5gvUNgU/QQvNmLgDDcMxr20KDosTwAuetinIC6OFZkzcgYaZBz9AbRe3zYEWmjNxB4YALmt5wWPJf4T85XM6T9z9cQcScHpa9fefPcfdH3dAmAAfwW9wBTf0GHd/3IEI3m9fgSHLcl0Ce0ncF2riDgwyAp6Emn8HF8Jeoe0xcQcGOQA1G3wNcy9aKVbCusNJ22LiDoAdUHPqC8ibGi+sHg6lusNJ22HiDWyAv2CceQmPyjb6FE6FuXA24bFC/i30Dqf4+6mJJ8DS/AHj/flLsZG8JqROAmeISdAizCaafwU9w0nzJrmBUJrxvjwZPCmBUfAUjPehtyE7WIXOJupzmHMrTDRrkhPQ0qQcBhwOCjtzHsb70mtwHFSqZhOVw2kKtNCciRWoKs29sAr+rSH1i16G+qw+NZswe0K2UbZjIuyEZkw6BapK8zC04K99A2qWd3scKmQX1M/ZSZ507pO6M+Rj/PGwCt3fpCpQVZos79ABC3aEf6bSYxyHG2FqNonHOn8AVk28D70KU8OJ6L4mVYFUafLsV31xFZPhE6jH0s6H2UTh912H8b70EtThRHQ/k1RgC9TtvAixM3Xgr/oM6jGDOpsorCTOJJrjLbNWo+5jooG18KdsY2nOgv/CbKgzCa2aTRSuJVIX42OQwzWgn5to4Lv8v6o067AAvoHx8elumANXlaxEzR+CAf3MRAOxVmnWYTHUBRWrYDPMgfcXvM+I83Q/JLrdRAPB3NKswzLIByjx93HYrYc5cGnMJXKcp3sS20w0EOy00OkGrCwdbqy4NTAHDkveLMX5lCapUM5Cpxvwgqs3VzwpucOOt8s6nFQTDXgWOt2AZa+zDt9ZWApzWA51OMWaaMC70OkGvACmFkaLYA6roVZS0MQdaAhOhdoWTpnzYQ7roFYSNXEHGmQf1PZ4FmGboOZN3IGGOQi1TVz85L73p1mTfntJisvaIzBuE30MrXsRtj3OZL0kxVfJ4hBfNev1a3IjYeqByB1Y9Wit9mtyw/5FSd5Tpx5atN27cDTMghcYvlubOlAbZeezX5YOsBL4qjmf43V6TaVfZZvZdj7MST0pKhQKhUKhMKwZGPgDontm/GnRpZEAAAAASUVORK5CYII=" width="13">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-cardFeed-tab" data-toggle="pill" href="#pills-cardFeed" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOVSURBVHhe7Zq5q9VAFMafiAo22qigllaCnWCnoJUKIti7YeOClbj8BVY2FpbaCHaCW6OgnVq4YSuCuGPlWgiifh++wOGbSc5MkpsX75sf/OCSM2cyN3dyMknuTKFQKBQKhUKExfA4fAi/wz8jk2N6AI9CjrVXVsOnMLbjMfoEcsy9sAQ+g7EdjdnHsJeZcAzGdvA/eAR2hue87fQ6XAPHBsd0A9qxsiZ0RgveWjhWODY71q+wM7ZDOnZ6H2/vHU6Y3sfbe4eZ7IRvZ93BDQ463srW6wTtaGjewGrfr7nBwY61zqx1giYPzSQOAE1eJ2ji0HDa8yDwy2/nBgcdb5NJ6wRNSuEA3P3v4+DUjbf1OsEmUI+t8Oes/Dw0TeNttU6wCbSJDfAzrNry80Y4JHasVPHiAakJK+BLqO0/wXVwKHT/ihcPSElYCvWewfoKdllC74epNUX3rXjxAC9hAbwKtZ36HC6HueTWFN2v4sUDvISzUNvchpdkG+Us4WxJZT3MrSl2f1Tx4gFNCYehxvlLL4ML4bXZbdabMGUBwpryAmq+V1O0veLFA+oStsFf0MbeQXuu89e+B20behny1KmjS03RtooXD4gl6OWO/oCboMLZwFlh29LzMAYPzBWo7dW6mqLtFC8eoAm8ibDrc8qZsAvWsRLGpvNpqMRqyh2YWlO0jeLFAzQhNjVPQA+etx+g5rKOVByEGs+tKRpXvHiAJqgXYCqxU4ezZw+sLnc2xgOWW1M0pnjxAE2w3oL8ZXLYDFkvbD/84l9kW9uaotsVLx6gCZXV1GwD64VeQaxeTVkFYzXlTGSb4sUDNIGyCHZZ2pK98DeM9X8KerCmfISxfKvixQM0gVOzrzu8k1D7/wZTD26spqiKFw/QhKap2YbYZS/n9NoCtaZYFS8ekJ2QCav3Raj7yblvaKopihcPyE5oQd01nttSH2Hvg7GaonjxgOyElvDXvgt1f959g4UrS81XvHhAdkIH6q7x52Aqmqt48YChX47W3QbH7hsUjs3mxB562jh14aNjm8BHy5N+Pc5r/Hto98vz+xCsI/Wxt41Tl2n7g4S2cWEV5rs0TRy7j+AiqGi7JPgMgO/SNHms8svXvfzUtslwJvDV8n3I4qIdzbUcE8fG5wtNawfN60zvHU6Y3sfbe4cTpvfxzvs/Uc3FOqENE/sb3bz/I+W0rRNaMU3rhNZMyzqhUCgUCoXCvGRm5i9vc9kwUdgHvAAAAABJRU5ErkJggg==" width="15">
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+        
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+<!--Gallery-->
+      <div id="pills-home">
+        <div class="container"> <!--Remove container for complete screen display-->
+          <div class="row no-gutters">
+          
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2018/08/31/19/16/fan-3645379__340.jpg" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                             <img alt="picture" src="https://cdn.pixabay.com/photo/2017/07/26/09/45/horses-2541030__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+          </div>
+             <div class="row no-gutters">
+          
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2014/06/22/11/29/peacock-374444__340.jpg" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2016/10/18/17/26/roses-1750801__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                             <img alt="picture" src="https://cdn.pixabay.com/photo/2017/05/18/11/26/cat-2323339__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+          </div>
+             <div class="row no-gutters">
+          
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2017/03/09/19/44/flower-2130622__340.jpg" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                              <img alt="picture" src="https://cdn.pixabay.com/photo/2018/09/03/20/18/blast-furnace-3652296__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+                      <div class="col-sm-4  border border-white">
+                             <img alt="picture" src="https://cdn.pixabay.com/photo/2013/04/09/01/46/czech-republic-102035__340.jpg" class="img-fluid" />
+                          </a>
+                      </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="tab-pane fade" id="pills-cardFeed" role="tabpanel" aria-labelledby="pills-profile-tab">
+    
+  <!--Second Gallery-->
+      <div id="pills-cardFeed">
+      
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                                <div class="img">
+                                    <img alt="picture" src="https://cdn.pixabay.com/photo/2018/08/31/19/16/fan-3645379__340.jpg" class=" img-fluid img-responsive" >
+                                </div>
+                                <div class="likes text-muted px-1 my-1"> 23 likes </div>
+                                <div class="description px-1">
+                                    This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                                </div>
+                                <div class="comments my-1 mx-2 py-2">
+                                    <img src="data:image/png;base64,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" width="17">
+                                    <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+         
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                <!--<h2>My first photo <small class="text-muted">12/14</small></h2>-->
+                                 <!--<h2>My first photo <small>12/14</small></h2>-->
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                            <div class="img">
+                                <img alt="picture" src="https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701__340.jpg" class="img-fluid">
+                            </div>
+                            <div class="likes text-muted px-1 my-1">
+                             23 likes   
+                            </div>
+                            <div class="description px-1">
+                                This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                            </div>
+                            <div class="comments my-1 mx-2 py-2">
+                                <img src="data:image/png;base64,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" width="17">
+                                <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+        
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                            <div class="img">
+                                <img alt="picture" src="https://cdn.pixabay.com/photo/2017/03/09/19/44/flower-2130622__340.jpg" class="img-fluid">
+                            </div>
+                            <div class="likes text-muted px-1 my-1"> 23 likes </div>
+                            <div class="description px-1">
+                                This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                            </div>
+                            <div class="comments my-1 mx-2 py-2">
+                                <img src="data:image/png;base64,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" width="17">
+                                <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+                
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                            <div class="img">
+                                <img alt="picture" src="https://cdn.pixabay.com/photo/2014/06/22/11/29/peacock-374444__340.jpg" class="img-fluid">
+                            </div>
+                            <div class="likes text-muted px-1 my-1"> 23 likes </div>
+                            <div class="description px-1">
+                                This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                            </div>
+                            <div class="comments my-1 mx-2 py-2">
+                                <img src="data:image/png;base64,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" width="17">
+                                <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+                
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                            <div class="img">
+                                <img alt="picture" src="https://cdn.pixabay.com/photo/2016/10/18/17/26/roses-1750801__340.jpg" class="img-fluid">
+                            </div>
+                            <div class="likes text-muted px-1 my-1"> 23 likes </div>
+                            <div class="description px-1">
+                                This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                            </div>
+                            <div class="comments my-1 mx-2 py-2">
+                                <img src="data:image/png;base64,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" width="17">
+                                <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+                    
+        <div class="row">
+                        <div class="col-6 mx-auto imageBox">
+                            <div class="boxheader bg-light">
+                                 <div class="row">
+                                      <h2 class="col-sm my-1">My first photo</h2></h2>
+                                      <span class="col-sm text-muted text-right mx-2 my-2">12/14</span>
+                                </div>
+                            <div class="img">
+                                <img alt="picture" src="https://cdn.pixabay.com/photo/2017/05/18/11/26/cat-2323339__340.jpg" class="img-fluid">
+                            </div>
+                            <div class="likes text-muted px-1 my-1"> 23 likes </div>
+                            <div class="description px-1">
+                                This is my first photo of the feed. This is a multi line comment for testing purposes. I am learning to code with #BreatheCode
+                            </div>
+                            <div class="comments my-1 mx-2 py-2">
+                                <img src="data:image/png;base64,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" width="17">
+                                <span class="text-muted">Comments</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIXSURBVHhe7Zo9SkNBFIUjFmovaNQdiFuwEYyIViqiuAPRBVgEV6KNBAkYyQqeWOQ/pDJgurgBf8skz3PhJozjJMRG5Hg/OPiYd2/xDTO+ESdhGIZhGIbxW8RxPFGv14+q1eo98qGR50N5p2WcZLPZSYhe12q1eEgyUqPlfED+PCDtJ63lXBQKhRlMwHtA2M9rFEXT2sYD9v1qQDYYqdU2HiC1HZIdki1t4wHLfyUgGky5XF7WNh7kE4dJaIaE3aDmQVv4gNw6JDu+tJMOtsqalnOCSdhFnn15GatUKjtaxg2EZ5FjSF9I5FnG9LVhGIZhGOTg+59ENiU4+8/rMD+NRmMRh548xHv42T8F9pAcjsELWsZJqVRagvBTX9wPJqEtNVrOByTzvrQfWQlazoUsb3fZDwtqukhS23iAXMqXHZGUtvEgUp7kqPBNgG6BbkD2S6SmWCzOaRsXkLsNSbtBzY2W8yGfOAi2Q+ISeYfw/QJ00a2QQwbbQZ51jFveRY6/mIwNCe2eNwzDMAzjGzj8zOLQc4pcak5kTF9zg4PPPmTf+qdAJy/InpZxIqc+SI789zjC96ewIBckIPfoyAaD7dDUFi4gNvYVGanVNh6w/Me+JCW12sYDpP73NbmfXJRstVpT2sYF5NKebChnWs6HXISGYMYTHgQr5Ir6srSg9wUPIHyHyIFIEskY/XV5wzAMwzD+EInEJ+fTKU6+GslKAAAAAElFTkSuQmCC" width="16" class="float-right my-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <br>
+       
+       </div>
+  </div>
+</div>
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
